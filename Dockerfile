@@ -1,11 +1,14 @@
-FROM python:3.6-alpine
+FROM python:alpine
+# Take the most recent Alpine Python tag as the base of this image.
+# shared tags are:
+# 3.7.1-alpine3.8, 3.7-alpine3.8, 3-alpine3.8, alpine3.8, 3.7.1-alpine, 3.7-alpine, 3-alpine, alpine
 
 LABEL maintainer="Ties de Kock"
 LABEL homepage="https://github.com/ties/docker-python-z3"
 
 # Build Z3 based on <https://github.com/eelkevdbos/z3-http/blob/master/Dockerfile>
-ARG Z3_VERSION="4.6.0"
-ARG NPROC="4"
+ARG Z3_VERSION="4.8.3"
+ARG NPROC="8"
 ENV Z3_ARGS="-smt2,-in"
 
 RUN apk update \
