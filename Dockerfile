@@ -7,7 +7,7 @@ LABEL maintainer="Ties de Kock"
 LABEL homepage="https://github.com/ties/docker-python-z3"
 
 # Build Z3 based on <https://github.com/eelkevdbos/z3-http/blob/master/Dockerfile>
-ARG Z3_VERSION="4.8.3"
+ARG Z3_VERSION="4.8.4"
 ARG NPROC="8"
 ENV Z3_ARGS="-smt2,-in"
 
