@@ -13,7 +13,7 @@ ENV Z3_ARGS="-smt2,-in"
 
 RUN apk update \
  && apk add --virtual .devdeps linux-headers musl-dev gcc libxml2-dev libxslt-dev openssh libffi-dev \
- && apk add --no-cache --virtual .z3deps build-base ca-certificates python wget make \
+ && apk add --no-cache --virtual .z3deps binutils build-base ca-certificates python wget make \
  && apk add bash libxml2 libxslt libffi git libstdc++ libgcc libgomp \
  && wget https://github.com/Z3Prover/z3/archive/z3-${Z3_VERSION}.tar.gz \
  && tar -xvzf z3-${Z3_VERSION}.tar.gz \
